@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light simulator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="traffic-light">
+        <div class="light red"></div>
+    <div class="light yellow"></div>
+    <div class="light green"></div>
+    </div>
+    
+<script>
+    const redLight=document.querySelector('.red');
+    const yellowLight = document.querySelector('.yellow');
+    const greenLight = document.querySelector('.green');
+
+    function changeLights(){
+        setTimeout(()=>{
+            redLight.style.backgroundColor='red';
+            yellowLight.style.backgroundColor='grey';
+            greenLight.style.backgroundColor='grey';
+       
+        setTimeout(()=>{
+            redLight.style.backgroundColor='grey' ;
+            yellowLight.style.backgroundColor ='yellow';
+            greenLight.style.backgroundColor='grey';
+       
+        setTimeout(()=>{
+            redLight.style.backgroundColor='grey';
+            yellowLight.style.backgroundColor='grey';
+            greenLight.style.backgroundColor='green';
+       
+
+   changeLights();
+    },6000);
+    },3000);
+    },2000);
+}
+changeLights();
+</script>
+</body>
+</html>
